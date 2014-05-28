@@ -7,6 +7,7 @@ ADD ./ /data/hello
 RUN /data/hello/bin/setup
 
 EXPOSE 3000
+EXPOSE 22
 
 RUN mkdir /etc/service/hello
 RUN ln -s /data/hello/bin/start /etc/service/hello/run
