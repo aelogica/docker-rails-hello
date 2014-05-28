@@ -12,6 +12,6 @@ EXPOSE 22
 RUN mkdir /etc/service/hello
 RUN ln -s /data/hello/bin/start /etc/service/hello/run
 
-ADD authorized_keys /root/.ssh/authorized_keys
+ADD authorized_keys.sample /root/.ssh/authorized_keys
 
 CMD /sbin/my_init
