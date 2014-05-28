@@ -8,4 +8,7 @@ RUN /data/hello/bin/setup
 
 EXPOSE 3000
 
-CMD /data/hello/bin/start
+RUN mkdir /etc/service/hello
+RUN ln -s /data/hello/bin/start /etc/service/hello/run
+
+CMD /sbin/my_init
