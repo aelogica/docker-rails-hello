@@ -4,8 +4,8 @@ MAINTAINER Nestor G. Pestelos, Jr. "nestor@aelogica.com"
 
 RUN mkdir -p /data/hello
 ADD ./ /data/hello
-RUN cd /data/hello && bundle install
-RUN cd /data/hello && rake db:migrate
+RUN /data/hello/bin/setup
 
 EXPOSE 3000
-CMD cd /data/hello && bundle exec rails server
+
+CMD /data/hello/bin/start
